@@ -1,17 +1,22 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <script>
+            function validateform(){
+                var name=document.myform.name.value;
+                var password=document.myform.assword.value;
+                if(name==null || name=="") 
+            {
+                alert("Name cant be blank");
+                return false;
+            }
+            }
+        </script>
+    <body>
+    <form name="myform" method="post" action="valid.html" onsubmit="return validateform()">
+        Name:<input type="text" name="name"><br/>
+        Password:<input type="password" name="password"><br/>
+        <input type="submit" value="register">
 
-<body>
-
-<h1>🛒 My E-Commerce Store</h1>
-
-<div id="products"></div>
-
-<script src="script.js"></script>
-
-</body>
+    </form>
+    </body>
 </html>
